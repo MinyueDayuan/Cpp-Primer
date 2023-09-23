@@ -9,7 +9,7 @@
 
 For such case, std::equal is going to compare the address value rather than the string value. 
 So the result is not the same as std::string. Try to avoid coding this way. Check [#227](https://github.com/Mooophy/Cpp-Primer/issues/227) for more detail.
-
+补充：equal 使用==运算符比较两个序列中的元素。string类重载了==,可比较两个字符串是否长度相等且其中元素对位相等。而C风格字符串本质是char*类型，用==比较两个char*对象，只是检查两个指针值是否相等，即地址是否相等，而不会比较其中字符是否相同。
 ## [Exercise 10.6](ex10_06.cpp)
 
 ## [Exercise 10.7](ex10_07.cpp)
